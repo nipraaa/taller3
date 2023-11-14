@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+skin rose
+
+entity Sistema{
+    archivo
+}
+
+entity Usuario{
+    nombre de usuario
+    nombre
+    contraseña
+    edad
+    estado
+
+}
+entity SolicitudesDeEmparejamiento{
+    nombre de suario
+    nombre
+    edad
+    estado
+}
+
+
+
+Sistema"1" --> "0..*"Usuario: iniciar sesion
+Usuario"1" --> "0..*"SolicitudesDeEmparejamiento: enviar y recibir
+
+@enduml

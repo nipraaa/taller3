@@ -1,0 +1,34 @@
+@startuml
+left to right direction
+skin rose
+set separator none
+!pragma useIntermediatePackages false
+package services{
+    interface Emparejamiento<<Interface>> {
+    }
+
+    class EmparejamientoImpl {
+    AjustesUsuario()
+    }
+}
+package model{
+    class ArrayList<Usuario>{
+        -..
+        +ArrayList<Usuario>()
+    }
+    class Usuario{
+        -nombre: String
+        -contraseña: String
+        -edad: int
+        -estado: String
+        +Usuario(nombre: String, contraseña: String, edad: int, estado: String)
+        +getNombre(): String
+        +getContraseña(): String
+        +getEdad(): int
+        +getEstado(): String
+    }
+
+}
+
+
+@enduml
