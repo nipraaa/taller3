@@ -17,8 +17,9 @@ public class EmparejamientoImpl {
             BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
             String linea;
             while ((linea = br.readLine()) != null) {
+                System.out.println("ds´kpsdspd");
                 String[] datos = linea.split("/");
-                if (datos.length == 8) {
+                //if (datos.length == 8) {
                     String nombreUsuario = datos[0];
                     String nombre = datos[1];
                     String apellido = datos[2];
@@ -27,9 +28,10 @@ public class EmparejamientoImpl {
                     String descripcion = datos[5];
                     String buzon = datos[6];
 
+                    System.out.println(nombre);
                     Usuario usuario = new Usuario(nombreUsuario, nombre, apellido, contrasena, edad, descripcion, buzon);
                     usuarios.add(usuario);
-                }
+                //}
             }
             br.close();
         } catch (IOException e) {
@@ -40,7 +42,7 @@ public class EmparejamientoImpl {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(nombreArchivo));
             for (Usuario usuario : usuarios) {
-                String linea = usuario.getNombreUsuario() + "," + usuario.getContrasena(" ") + "," +
+                String linea = usuario.getNombre() + "," + usuario.getContrasena(" ") + "," +
                         usuario.getDescripcion() + "," + usuario.getEdad();
                 bw.write(linea);
                 bw.newLine();
@@ -50,9 +52,9 @@ public class EmparejamientoImpl {
             e.printStackTrace();
         }
     }
-    private static Usuario buscarUsuarioPorNombre(String nombreUsuario) {
+    private static Usuario buscarUsuarioPorNombre(String nombre) {
         for (Usuario usuario : usuarios) {
-            if (usuario.getNombreUsuario().equals(nombreUsuario)) {
+            if (usuario.getNombre().equals(nombre)) {
                 return usuario;
             }
         }
@@ -121,9 +123,13 @@ public class EmparejamientoImpl {
         System.out.print("Contraseña: ");
         String contrasena = scanner.nextLine();
 
-        Usuario usuario = buscarUsuarioPorNombre(nombre);
+        String contrasenaEnBase64 = Base64Util.encode(contrasena);
+        System.out.println("X: " + contrasenaEnBase64);
 
-        if (usuario != null && usuario.getContrasena("").equals(contrasena)) {
+        Usuario usuario = buscarUsuarioPorNombre(nombre);
+        System.out.println(usuario.getContrasena(""));
+
+        if (usuario != null && usuario.getContrasena("").equals(contrasenaEnBase64)) {
             usuarioActual = usuario;
             System.out.println("Sesión iniciada como " + usuarioActual.getNombreUsuario());
         } else {

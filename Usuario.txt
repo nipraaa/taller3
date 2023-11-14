@@ -1,15 +1,15 @@
-SuperJuan/Juan/Mancilla/c2VyZ2lvMTIz/21/Soy Juan :D/-/-/-
-DarkSergio7/Sergio/Villalobos/ZmFicml6emlvMTIz/18/Libre como el viento/TheHelena/-/-
-VMartinG/Martin/Serrano/dWphbjEyMy/21/0riginal/-/SuperJorge/-
-TheHelena/Helena/Figueroa/ZGlLZ28xMjM/31/Ingeniera en prevención de riesgos/-/-/DarkSergio07@faby07
-SuperJorge/Jorge/Becerra/ZmVybmFkYTEyMw == /19/Me gusta el reggeaton/-/VMarinG/-
-pablo.gg/Pablo/Muñoz/aXZhbjEyMy/20/Soy una persona normal con gustos interesantes/-/-/antonimos
-ampplg/Amapola/Sanchez/Y2F0YWxpbmExMjM/22/Ingeniería civil industrial/julio_v/faby07/-
-rrx/Luis/Ortiz/bWFydGluMTIz/21/Me encanta mi trabajo!/-/-/mak.a_k
-faby07/Fabian/Sepulveda/c2VybmdpbzEyMw == /20/Prisionero de ti/TheHelena/ampplg/-
-mak.a_k/Makarena/Cortes/bWFraXRhMTIz/19/Vendo pastelitos estoy soltera/julio_v@rrx/-/-
-delfy/Delfina/Asignaturas/YnRzMTIz/20/Me gusta el KPOP/franco.r/-/-
-antonimos/Antonella/Valenzuela/aG9sYTI5NDgy/19/Amo PLC/pablo.gg@franco.r/-/-
-daniauwu/Dania/Villaroel/cGFuY2hvMjkz/22/Estudio en la UCN/-/-/franco. r
-franco.r/Franco/Ripamonti/dXd1d3V3dXd1/30/Político/luchando por la causa social/daniauwu/-/antonimos@delfy
-julio_v/Julio/Valladares/anVsaXRvDQo=/50/Viudo con dos hijos/-/-/mak.a_k@ampplg
+Juan,c2VyZ2lvMTIz,Soy Juan :D,21
+Sergio,ZmFicml6emlvMTIz,Libre como el viento,18
+Martin,dWphbjEyMy,0riginal,21
+Helena,ZGlLZ28xMjM,Ingeniera en prevención de riesgos,31
+Jorge,ZmVybmFkYTEyMw == ,Me gusta el reggeaton,19
+Pablo,aXZhbjEyMy,Soy una persona normal con gustos interesantes,20
+Amapola,Y2F0YWxpbmExMjM,Ingeniería civil industrial,22
+Luis,bWFydGluMTIz,Me encanta mi trabajo!,21
+Fabian,c2VybmdpbzEyMw == ,Prisionero de ti,20
+Makarena,bWFraXRhMTIz,Vendo pastelitos estoy soltera,19
+Delfina,YnRzMTIz,Me gusta el KPOP,20
+Antonella,aG9sYTI5NDgy,Amo PLC,19
+Dania,cGFuY2hvMjkz,Estudio en la UCN,22
+Franco,dXd1d3V3dXd1,Político,30
+Julio,anVsaXRvDQo=,Viudo con dos hijos,50

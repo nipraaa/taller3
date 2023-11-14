@@ -10,49 +10,62 @@ public class Usuario {
     private String buzon;
     private boolean emparejado;
 
-    public Usuario(String nombreUsuario, String contrasena,int edad, String descripcion,String buzon) {
+    public Usuario(String nombreUsuario, String nombre, String apellido, String contrasena,int edad, String descripcion,String buzon) {
         this.nombreUsuario = nombreUsuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
         this.contrasena = contrasena;
-        this.descripcion = descripcion;
         this.edad = edad;
+        this.descripcion = descripcion;
         this.buzon = buzon;
         this.emparejado = false;
     }
 
-    public Usuario(String nombreUsuario, String nombre, String apellido, String contrasena,int edad, String descripcion,String buzon) {
-    }
+    public String getNombreUsuario () {
+            return nombreUsuario;
+        }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
+        public String getNombre () {
+            return nombre;
+        }
 
-    public String getContrasena(String nuevaContrasena) {
-        return contrasena;
-    }
+        public String getApellido () {
+            return apellido;
+        }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+        public String getContrasena (String contrasena){
+            return this.contrasena;
+        }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+        public String getDescripcion () {
+            return descripcion;
+        }
 
-    public int getEdad() {
-        return edad;
-    }
+        public void setDescripcion (String descripcion){
+            this.descripcion = descripcion;
+        }
 
-    public boolean isEmparejado() {
-        return emparejado;
-    }
+        public int getEdad () {
+            return edad;
+        }
 
-    public void emparejar() {
-        emparejado = true;
-    }
+        public String getBuzon () {
+            return buzon;
+        }
 
-    public void desemparejar() {
-        emparejado = false;
-    }
+        public boolean isEmparejado () {
+            return emparejado;
+        }
+
+        public void emparejar () {
+            emparejado = true;
+        }
+
+        public void desemparejar () {
+            emparejado = false;
+        }
+
+
 }
 
 
