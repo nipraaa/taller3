@@ -8,7 +8,10 @@ package services{
     }
 
     class EmparejamientoImpl {
-    AjustesUsuario()
+    +AjustesUsuario(estado: String, contraseña: String, edad: int): boolean
+    +MostrarUsuarios(): String
+    +MostrarUsuarioEdad(): String
+    +
     }
 }
 package model{
