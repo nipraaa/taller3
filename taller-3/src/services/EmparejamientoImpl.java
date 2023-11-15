@@ -1,3 +1,8 @@
+package services;
+
+import model.Usuario;
+import utils.Base64Util;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +14,7 @@ public class EmparejamientoImpl {
     private static Usuario usuarioActual = null;
 
     public static void main(String[] args) {
-        cargarUsuariosDesdeArchivo("Usuario.txt");
+        cargarUsuariosDesdeArchivo("model.Usuario.txt");
         mostrarMenuPrincipal();
     }
     public static void cargarUsuariosDesdeArchivo(String nombreArchivo) {
@@ -38,7 +43,7 @@ public class EmparejamientoImpl {
             e.printStackTrace();
         }
     }
-    private static void guardarUsuariosEnArchivo(String nombreArchivo) {
+    public static void guardarUsuariosEnArchivo(String nombreArchivo) {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(nombreArchivo));
             for (Usuario usuario : usuarios) {
@@ -52,7 +57,7 @@ public class EmparejamientoImpl {
             e.printStackTrace();
         }
     }
-    private static Usuario buscarUsuarioPorNombre(String nombre) {
+    public static Usuario buscarUsuarioPorNombre(String nombre) {
         for (Usuario usuario : usuarios) {
             if (usuario.getNombre().equals(nombre)) {
                 return usuario;
@@ -75,7 +80,7 @@ public class EmparejamientoImpl {
                         iniciarSesion();
                         break;
                     case 2:
-                        guardarUsuariosEnArchivo("Usuario.txt");
+                        guardarUsuariosEnArchivo("model.Usuario.txt");
                         System.exit(0);
                         break;
                     default:
@@ -106,7 +111,7 @@ public class EmparejamientoImpl {
                         break;
                     case 5:
                         usuarioActual = null;
-                        guardarUsuariosEnArchivo("Usuario.txt");
+                        guardarUsuariosEnArchivo("model.Usuario.txt");
                         System.out.println("Sesión cerrada.");
                         break;
                     default:
@@ -116,7 +121,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void iniciarSesion() {
+    public static void iniciarSesion() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nombre de usuario: ");
         String nombre = scanner.nextLine();
@@ -137,7 +142,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void ajustesDeUsuario() {
+    public static void ajustesDeUsuario() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1. Cambiar descripción");
         System.out.println("2. Cambiar contraseña");
@@ -185,7 +190,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void mostrarUsuariosDisponibles() {
+    public static void mostrarUsuariosDisponibles() {
         boolean usuariosDisponibles = false;
         for (Usuario usuario : usuarios) {
             if (!usuario.isEmparejado()) {
@@ -201,7 +206,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void mostrarUsuariosPorEdad() {
+    public static void mostrarUsuariosPorEdad() {
         usuarios.sort((u1, u2) -> u1.getEdad() - u2.getEdad());
 
         for (Usuario usuario : usuarios) {
@@ -214,7 +219,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void solicitudesDeEmparejamiento() {
+    public static void solicitudesDeEmparejamiento() {
         if (usuarioActual.isEmparejado()) {
             System.out.println("Ya tienes un emparejamiento activo.");
             return;
@@ -258,7 +263,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void mostrarSolicitudesEnviadas() {
+    public static void mostrarSolicitudesEnviadas() {
         System.out.println("Solicitudes de emparejamiento enviadas por " + usuarioActual.getNombreUsuario() + ":");
         for (Usuario usuario : usuarios) {
             if (usuario.isEmparejado() && usuarioActual.getNombreUsuario().equals(usuario.getNombreUsuario())) {
@@ -271,7 +276,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void mostrarSolicitudesRecibidas() {
+    public static void mostrarSolicitudesRecibidas() {
         System.out.println("Solicitudes de emparejamiento recibidas por " + usuarioActual.getNombreUsuario() + ":");
         for (Usuario usuario : usuarios) {
             if (usuario.isEmparejado() && !usuarioActual.getNombreUsuario().equals(usuario.getNombreUsuario())) {
@@ -284,7 +289,7 @@ public class EmparejamientoImpl {
         }
     }
 
-    private static void realizarSolicitudEmparejamiento() {
+    public static void realizarSolicitudEmparejamiento() {
         if (usuarioActual.isEmparejado()) {
             System.out.println("Ya tienes un emparejamiento activo.");
             return;

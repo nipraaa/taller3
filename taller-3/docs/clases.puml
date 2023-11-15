@@ -8,10 +8,21 @@ package services{
     }
 
     class EmparejamientoImpl {
-    +AjustesUsuario(estado: String, contraseña: String, edad: int): boolean
-    +MostrarUsuarios(): String
-    +MostrarUsuarioEdad(): String
-    +
+    +cagarUsuariosDesdeArchivo(nombre: String): void
+    +guardarUsuariosEnArchivo(nombreArchivo: String): void
+    +buscarUsuarioPorNombre(nombre: String): Usuario
+    +mostrarMenuPrincipal(): void
+    +iniciarSesion(): void
+    +ajustesDeUsuario(): void
+    +MostrarUsuariosDisponibles(): String
+    +MostrarUsuarioPorEdad(): String
+    +SolicitudesDeEmparejamiento()
+    +mostrarSolicitudesEnviadas(): void
+    +mostrarSolicitudesRecibidas(): void
+    +realizarSolicitudesEmparejamiento(): void
+    -aceptarSolicitudEmparejamiento(): void
+    -rechazarSolicitudEmparejamiento(): void
+    -cancelarEmparejamiento(): void
     }
 }
 package model{
@@ -32,6 +43,8 @@ package model{
     }
 
 }
-
+ArrayList o--> Usuario: -listaUsuario: ListaUsuario[]
+Emparejamiento <|.. EmparejamientoImpl
+EmparejamientoImpl *--> ArrayList: -listaUsuario: ListaUsuario
 
 @enduml

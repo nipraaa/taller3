@@ -1,3 +1,5 @@
+package utils;
+
 import java.util.Base64;
 
 public class Base64Util {
